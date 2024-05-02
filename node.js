@@ -2,10 +2,14 @@
 var btn = document.getElementById("btn")
 
 var elementos = document.getElementById("elementos")
+var txtNumElementos = document.getElementById("txtNumElementos")
 
 function getElementos(){
 
     btn.remove()
+    elementos.remove()
+
+    txtNumElementos.remove()
     
     num = parseFloat(elementos.value)
 
@@ -31,6 +35,10 @@ function getElementos(){
     <button type="button" id="btnsend" onclick="desvioPadrao()">
     <p class="btntxt">Send</p>
     </button>
+
+    <button type="button" id="return" onclick="window.location.reload();">
+    <p class="btntxt">Return</p>
+    </button>
     
     `
 }
@@ -38,6 +46,8 @@ function getElementos(){
     var btnsend = document.getElementById("btnsend")
 
 function desvioPadrao(){
+
+
 
     num = parseFloat(elementos.value)
 
