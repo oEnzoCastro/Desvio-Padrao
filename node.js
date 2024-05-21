@@ -1,12 +1,21 @@
 
-var btn = document.getElementById("btn")
+/*document.getElementById("darkMode_btn_container").innerHTML += `
+
+
+<button id="darkMode_btn" type="button">
+    <ion-icon name="moon"></ion-icon>
+</button>
+
+`
+*/
+var btn_desvio_padrao = document.getElementById("btn_desvio_padrao")
 
 var elementos = document.getElementById("elementos")
 var txtNumElementos = document.getElementById("txtNumElementos")
 
 function getElementos(){
 
-    btn.remove()
+    btn_desvio_padrao.remove()
     elementos.remove()
 
     txtNumElementos.remove()
@@ -17,7 +26,7 @@ function getElementos(){
 
     document.getElementById("numElementosAlert").innerHTML += `
         
-    <p class="result">Valor dos Elementos:</p>
+    <p class="result_top_title">Valor dos Elementos:</p>
     
     `
     
@@ -25,7 +34,7 @@ function getElementos(){
         
         document.getElementById("numElementos").innerHTML += `
         
-        <input type="number" class="x" id="` + i + `" required="">
+        <input type="number" title="Insira o ` + (i + 1) + `° Elemento" class="x" id="` + i + `">
         
         `
     }
@@ -71,14 +80,19 @@ function desvioPadrao(){
 
     soma = Math.sqrt(soma/(num-1))
 
-    console.log(soma)
-
     document.getElementById("form").innerHTML += `
-    
-    <p class="resultTitle">Result:</p>
-    <p class="result">` + soma + `</p>
 
-    
+    <div id="result_container_desvioPadrao">
+        <div class="result_desvioPadrao">
+            <p class="resultTitle">Desvio Padrão</p>
+            <p class="result">` + soma + `</p>
+        </div>
+        <div class="result_desvioPadrao">
+            <p class="resultTitle">Media</p>
+            <p class="result">` + media + `</p>
+        </div>
+    </div>
+
     `
 
 }
