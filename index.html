@@ -7,18 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="darkMode_btn_container">
+    </div>
+
     <form method="dialog" id="form">
 
-        <p class="result" id="txtNumElementos">Numero de Elementos:</p>
-        <input type="number" id="elementos" required="">
+        <p class="result_top_title" id="txtNumElementos">Numero de Elementos:</p>
+        <input type="number" id="elementos" title="Insira o Número de Elementos" required="">
         <div id="numElementosAlert"></div>
         <div id="numElementos"></div>
-        <button type="button" id="btn" onclick="getElementos()">
+        <button type="button" id="btn_desvio_padrao" onclick="getElementos()">
             <p class="btntxt">Send</p>
         </button>
+
+
 
     </form>
     
     <script src="node.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
